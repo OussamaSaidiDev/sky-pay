@@ -19,6 +19,7 @@ import java.util.List;
 import static org.example.exception.ExceptionMessages.*;
 
 public class Service {
+
     ArrayList<Room> rooms;
     ArrayList<Users> users;
     ArrayList<Booking> bookings;
@@ -33,14 +34,12 @@ public class Service {
             room = new Room(roomNumber,roomType,roomPricePerNight);
             rooms.add(room);
             System.out.println("Room created: ");
-            DisplayUtils.displayRoomDetail(room);
         }else{
             room.setPrice(roomPricePerNight);
             room.setType(roomType);
             System.out.println("Room Updated: ");
-            DisplayUtils.displayRoomDetail(room);
         }
-
+        DisplayUtils.displayRoomDetail(room);
     }
     public void setUser(int userId, int balance) {
         if (users == null) {
@@ -53,12 +52,11 @@ public class Service {
             user = new Users(userId, balance);
             users.add(user);
             System.out.println("User created:");
-            DisplayUtils.displayUsersDetail(user);
         } else {
             user.setBalance(balance);
             System.out.println("User updated: ");
-            DisplayUtils.displayUsersDetail(user);
         }
+        DisplayUtils.displayUsersDetail(user);
     }
 
 

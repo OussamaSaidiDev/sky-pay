@@ -23,7 +23,6 @@ public class BankingSystem {
     }
 
     public void runSystem(){
-        Scanner scanner = new Scanner(System.in);
         int input = 0;
         Account account = null;
         do{
